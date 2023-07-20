@@ -40,7 +40,7 @@ console.log("--------------------------");
 const sumArray = (arr) => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    sum += i;
+    sum += arr[i];
   }
   console.log(sum);
 };
@@ -77,5 +77,26 @@ function isArmstrongNumber(number) {
 isArmstrongNumber(9474);
 isArmstrongNumber(520);
 // Write a function countOccurrences(arr, target) that takes an array and a target value as input and returns the number of occurrences of the target value in the array.
+function countOccurrences(arr, number) {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == number) {
+      count += 1;
+    }
+  }
+  return count;
+}
+console.log(countOccurrences([1, 2, 3, 1, 4, 5], 1));
 // Write a function flattenObject(obj) that takes an object with nested objects as input and returns a flattened object with nested keys combined using dot notation.
 // Write a function calculateAverage(arr) that takes an array of numbers as input and returns the average (mean) value of the numbers.
+
+const calculateAverage = (arr) => {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  const average = total / arr.length;
+  console.log(average);
+};
+calculateAverage([10, 20, 30, 40, 50]);
